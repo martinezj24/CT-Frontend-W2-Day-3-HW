@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Task 1: Create a Basic CSS Grid Layout */
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header'
+                'content'
+                'sidebar'
+                'footer';
+            grid-gap: 10px;
+            padding: 10px;
+        }
+        header {
+            grid-area: header;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            grid-area: content;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #ccc;
+            padding: 20px;
+        }
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        /* Task 2: Implement Responsive Design Using CSS Grid */
+        @media screen and (min-width: 768px) {
+            .container {
+                grid-template-areas:
+                    'header header'
+                    'content sidebar'
+                    'footer footer';
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        /* Task 3: Advanced Grid Layout with Template Columns and Rows */
+        @media screen and (min-width: 1024px) {
+            .container {
+                grid-template-columns: 3fr 1fr;
+                grid-template-rows: auto 1fr auto;
+                grid-template-areas:
+                    'header header'
+                    'content sidebar'
+                    'footer footer';
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Header</h1>
+        </header>
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec lectus feugiat, vehicula massa nec, aliquet metus.</p>
+        </div>
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Sed non rhoncus ex, non vehicula nulla. Mauris auctor, lorem id fringilla dapibus, dui lacus vestibulum ipsum.</p>
+        </div>
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+</html>

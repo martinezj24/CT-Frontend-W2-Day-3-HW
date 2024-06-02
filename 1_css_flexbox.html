@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Task 1: Create a Basic Flexbox Layout */
+        header {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/750/414/small/hi-tech-digital-circuit-board-futuristic-ai-pad-and-electrical-lines-connected-on-blue-lighting-background-vector.jpg');
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 50px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333333;
+            color: #ffffff;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        /* Task 2: Implement Responsive Design */
+        @media screen and (max-width: 600px) {
+            nav, footer {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header Text</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">About</a>
+    </nav>
+    <main>
+        <div>
+            <h2>Content 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec lectus feugiat, vehicula massa nec, aliquet metus.</p>
+        </div>
+        <div>
+            <h2>Content 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fuga voluptas sequi nisi quod minus deserunt ad illum animi amet ipsa ullam aut perferendis, atque nesciunt est vitae obcaecati distinctio!</p>
+        </div>
+    </main>
+    <footer>
+        <p>Contact Us | Events | Blog</p>
+    </footer>
+</body>
+</html>
